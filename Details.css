@@ -1,0 +1,511 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: changebghead 30s infinite;
+  background-attachment: fixed;
+}
+#app {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  align-items: center;
+  gap: 10px;
+}
+#heading {
+  font-family: "Bevan", serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 60px;
+  animation: changebghead 30s infinite;
+  background: transparent !important;
+}
+
+#back {
+  width: 500px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.242);
+  font-size: 20px;
+  text-align: Center;
+  padding: 10px 15px;
+  animation: changetext 30s infinite;
+  border: 2px solid white;
+}
+
+#main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  color: black;
+}
+#left {
+  width: 30%;
+  height: 450px;
+  overflow: hidden;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.242);
+  font-size: 20px;
+  text-align: Center;
+  padding: 10px 15px;
+  border: 2px solid white;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#imagebox{
+  height: 400px;
+  width:100%;
+  padding: 20px;
+}
+#image{
+  width: 100%;
+  max-height: 350px;
+  object-fit: contain;
+}
+#cityName {
+  font-size: 40px;
+  font-family: "Lexend", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+#right {
+  width: 70%;
+  height: 450px;
+  overflow: hidden;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.242);
+  font-size: 20px;
+  text-align: Center;
+  padding: 10px 15px;
+  border: 2px solid white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#maintemp {
+  display: flex;
+  flex-direction: column;
+  font-family: "Lexend", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 30px;
+  gap: 5px;
+  padding :5px;
+  justify-content: space-evenly;
+}
+#main_temp{
+          font-size: 50px;
+}
+#feels{
+          font-size: 50px;
+}
+#max_temp{
+          font-size: 50px;
+}
+#min_temp{
+          font-size: 50px;
+}
+#weather{
+          font-size: 50px;
+}
+#visibility{
+          font-size: 50px;
+}
+#feelslike {
+  display: flex;
+  flex-direction: column;
+  font-family: "Lexend", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 30px;
+  gap: 5px;
+  padding :5px;
+  justify-content: space-evenly;
+}
+#maxtemp {
+  display: flex;
+  flex-direction: column;
+  font-family: "Lexend", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 30px;
+  gap: 5px;
+  padding :5px;
+  justify-content: space-evenly;
+}
+#mintemp {
+  display: flex;
+  flex-direction: column;
+  font-family: "Lexend", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 30px;
+  gap: 5px;
+  padding :5px;
+  justify-content: space-evenly;
+}
+#Weather {
+  display: flex;
+  flex-direction: column;
+  font-family: "Lexend", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 30px;
+  gap: 5px;
+  justify-content: space-evenly;
+  padding :5px;
+}
+#Visibility {
+  display: flex;
+  flex-direction: column;
+  font-family: "Lexend", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 30px;
+  gap: 5px;
+  padding :5px;
+  justify-content: space-evenly;
+}
+
+@keyframes changebghead {
+  0%,
+  100% {
+    color: rgb(102, 102, 102);
+    background-image: url("1.jpg");
+  }
+  20% {
+    color: rgb(0, 0, 0);
+    background-image: url("2.jpg");
+  }
+  40% {
+    color: rgb(253, 253, 253);
+    background-image: url("4.jpg");
+  }
+  60% {
+    color: rgb(0, 0, 0);
+    background-image: url("3.jpg");
+  }
+  80% {
+    color: rgb(250, 250, 250);
+    background-image: url("5.jpg");
+  }
+}
+
+@keyframes changetext {
+  0%,
+  100% {
+    color: rgb(102, 102, 102);
+  }
+  20% {
+    color: rgb(0, 0, 0);
+  }
+  40% {
+    color: rgb(253, 253, 253);
+  }
+  60% {
+    color: rgb(0, 0, 0);
+  }
+  80% {
+    color: rgb(250, 250, 250);
+  }
+}
+
+/* ========================================
+   TABLET
+   601px - 1024px
+   ======================================== */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    body {
+        background-attachment: scroll;
+    }
+
+    #app {
+        width: 100%;
+        padding: 25px;
+        gap: 15px;
+    }
+
+    #heading {
+        font-size: 50px;
+        line-height: 1.2;
+    }
+
+    #back {
+        width: 70%;
+        max-width: 500px;
+    }
+
+    /* Main container */
+
+    #main {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Left weather image */
+
+    #left {
+        width: 100%;
+        height: 400px;
+        padding: 20px;
+    }
+
+    #cityName {
+        font-size: 38px;
+    }
+
+    #imagebox {
+        width: 100%;
+        height: 300px;
+        padding: 10px;
+    }
+
+    #image {
+        width: 100%;
+        max-width: 350px;
+        max-height: 280px;
+        object-fit: contain;
+    }
+
+    /* Weather statistics */
+
+    #right {
+        width: 100%;
+        height: auto;
+        min-height: 400px;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px;
+        padding: 15px;
+    }
+
+    #maintemp,
+    #feelslike,
+    #maxtemp,
+    #mintemp,
+    #Weather,
+    #Visibility {
+        font-size: 24px;
+        padding: 15px;
+        gap: 8px;
+    }
+
+    #main_temp,
+    #feels,
+    #max_temp,
+    #min_temp,
+    #weather,
+    #visibility {
+        font-size: 42px;
+    }
+}
+/* ========================================
+   LAPTOP
+   1025px - 1400px
+   ======================================== */
+
+@media (min-width: 1025px) and (max-width: 1400px) {
+
+    #app {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    #heading {
+        font-size: 52px;
+    }
+
+    #back {
+        width: 450px;
+    }
+
+    #main {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    #left {
+        width: 32%;
+        height: 430px;
+    }
+
+    #right {
+        width: 68%;
+        height: 430px;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 10px;
+    }
+
+    #cityName {
+        font-size: 35px;
+    }
+
+    #imagebox {
+        height: 350px;
+        padding: 10px;
+    }
+
+    #image {
+        max-height: 320px;
+        object-fit: contain;
+    }
+
+    #maintemp,
+    #feelslike,
+    #maxtemp,
+    #mintemp,
+    #Weather,
+    #Visibility {
+        font-size: 24px;
+        padding: 5px;
+    }
+
+    #main_temp,
+    #feels,
+    #max_temp,
+    #min_temp,
+    #weather,
+    #visibility {
+        font-size: 42px;
+    }
+}
+/* ========================================
+   LARGE LAPTOP / DESKTOP
+   1401px and above
+   ======================================== */
+
+@media (min-width: 1401px) {
+
+    #main {
+        padding: 25px;
+        gap: 25px;
+    }
+
+    #left {
+        width: 30%;
+    }
+
+    #right {
+        width: 70%;
+    }
+}
+@media (max-width: 600px) {
+
+    body {
+        background-attachment: scroll;
+    }
+
+    #app {
+        width: 100%;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    /* Heading */
+
+    #heading {
+        font-size: 38px;
+        line-height: 1.2;
+    }
+
+    /* Back button */
+
+    #back {
+        width: 100%;
+        max-width: 400px;
+        height: 50px;
+        font-size: 18px;
+    }
+
+    /* Main container */
+
+    #main {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Left section */
+
+    #left {
+        width: 100%;
+        height: auto;
+        min-height: 350px;
+        padding: 15px;
+    }
+
+    #cityName {
+        font-size: 32px;
+    }
+
+    #imagebox {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    #image {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Right section */
+
+    #right {
+        width: 100%;
+        height: auto;
+
+        display: grid;
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+        padding: 15px;
+    }
+
+    /* Weather information */
+
+    #maintemp,
+    #feelslike,
+    #maxtemp,
+    #mintemp,
+    #Weather,
+    #Visibility {
+        font-size: 20px;
+        padding: 15px;
+        gap: 8px;
+    }
+
+    /* Large weather values */
+
+    #main_temp,
+    #feels,
+    #max_temp,
+    #min_temp,
+    #weather,
+    #visibility {
+        font-size: 38px;
+    }
+}

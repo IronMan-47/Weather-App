@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Details of Weather</title>
+    <link rel="stylesheet" href="Details.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=Cabin+Sketch:wght@400;700&family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <div id="heading">Detailed Weather Statatics</div>
+      <button id="back" onclick="window.location.href = 'index.html'">
+        Back To Search
+      </button>
+      <div id="main">
+        <div id="left">
+          <div id="city">
+            <div id="cityName"><span id="city_name">City_name</span></div>
+          </div>
+          <div id="imagebox">
+            <img src="rainy.svg" alt="" id="image">
+          </div>
+        </div>
+        <div id="right">
+          <div id="maintemp">
+            Overall Temperture: <span id="main_temp">0</span>
+          </div>
+          <div id="feelslike">Feels Like: <span id="feels">0</span></div>
+          <div id="maxtemp">Max Temperture: <span id="max_temp">0</span></div>
+          <div id="mintemp">Min Temperture: <span id="min_temp">0</span></div>
+          <div id="Weather">Weather: <span id="weather">weather</span></div>
+          <div id="Visibility">
+            Visibility: <span id="visibility">0</span>Km
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,215 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: changebghead 30s infinite;
+  background-attachment: fixed;
+}
+#app {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  align-items: center;
+  gap: 10px;
+}
+#heading {
+  font-family: "Bevan", serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 60px;
+  animation: changebghead 30s infinite;
+  background: transparent !important;
+}
+
+#Search{
+          width:500px;
+          height: 50px;
+          overflow: hidden ;
+          border-radius: 15px;
+          text-align: Center;
+          padding: 10px 15px;
+          color: black;
+          animation: changebghead 30s infinite;
+          border:2px solid white;
+          background: transparent !important;
+          font-size: 20px;
+}
+#Search::placeholder {
+  animation: changebghead 30s infinite;
+  background: transparent !important;
+  font-size: 20px;
+  opacity: 1;
+}
+#Submit{
+          width:500px;
+          height: 50px;
+          overflow: hidden ;
+          border-radius: 15px;
+          background-color: rgba(255, 255, 255, 0.242);
+          font-size: 20px;
+          text-align: Center;
+          padding: 10px 15px;
+          animation: changetext 30s infinite;
+          border:2px solid white;
+}
+
+@keyframes changebghead {
+  0%,
+  100% {
+    color: rgb(102, 102, 102);
+    background-image: url("1.jpg");
+  }
+  20%{
+    color: rgb(0, 0, 0);
+    background-image: url("2.jpg");
+  }
+  40%{
+    color: rgb(253, 253, 253);
+    background-image: url("4.jpg");
+  }
+  60%{
+    color: rgb(0, 0, 0);
+    background-image: url("3.jpg");
+  }
+  80%{
+    color: rgb(250, 250, 250);
+    background-image: url("5.jpg");
+  }
+}
+@keyframes changetext {
+  0%,
+  100% {
+    color: rgb(102, 102, 102);
+  }
+  20%{
+    color: rgb(0, 0, 0);
+  }
+  40%{
+    color: rgb(253, 253, 253);
+  }
+  60%{
+    color: rgb(0, 0, 0);
+  }
+  80%{
+    color: rgb(250, 250, 250);
+  }
+}
+/* =========================================
+   TABLET
+   601px - 1024px
+   ========================================= */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    #app {
+        width: 100%;
+        padding: 30px;
+        gap: 20px;
+    }
+
+    #heading {
+        font-size: 55px;
+        line-height: 1.2;
+    }
+
+    #Searchbox {
+        width: 70%;
+        max-width: 500px;
+    }
+
+    #Search {
+        width: 100%;
+        height: 50px;
+        font-size: 19px;
+    }
+
+    #Submit {
+        width: 70%;
+        max-width: 500px;
+        height: 50px;
+        font-size: 19px;
+    }
+}
+
+
+/* =========================================
+   LAPTOP
+   1025px - 1400px
+   ========================================= */
+
+@media (min-width: 1025px) and (max-width: 1400px) {
+
+    #app {
+        width: 100%;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    #heading {
+        font-size: 58px;
+    }
+
+    #Searchbox {
+        width: 500px;
+    }
+
+    #Search {
+        width: 100%;
+    }
+
+    #Submit {
+        width: 500px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+   600px AND BELOW
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    #app {
+        width: 100%;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    #heading {
+        font-size: 38px;
+        line-height: 1.2;
+    }
+
+    /* THIS IS THE IMPORTANT FIX */
+    #Searchbox {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    #Search {
+        width: 100%;
+        height: 50px;
+        font-size: 16px;
+    }
+
+    #Search::placeholder {
+        font-size: 16px;
+    }
+
+    #Submit {
+        width: 100%;
+        max-width: 500px;
+        height: 50px;
+        font-size: 18px;
+    }
+}
