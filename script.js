@@ -56,7 +56,8 @@ async function loadweatherdata() {
         rainy: 'rainy.svg',
         snowy: 'snowy.svg',
         thunderstorm: 'thunderstorm.svg',
-        windy: 'windy.svg'
+        windy: 'windy.svg',
+        cloud: 'Clouds.svg'
       };
       let selectedImage;
       switch (data_response.weather[0].main) {
@@ -85,7 +86,7 @@ async function loadweatherdata() {
           selectedImage = images.windy;
           break;
         case 'Clouds':
-          selectedImage = images.clear;
+          selectedImage = images.cloud;
           break;
       }
       image.src = selectedImage;
